@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos - Matt Stoller</title>
+    <meta name="description" content="Photos of Matt Stoller available for media use.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#work">Work</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#book">Book</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="index.html#newsletter">Newsletter</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="https://x.com/matthewstoller" target="_blank">Twitter</a></li>
+                <li><a href="https://www.linkedin.com/in/matt-stoller-2000/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="articles-page">
+        <header class="page-header">
+            <div class="container">
+                <h1>Photos</h1>
+            </div>
+        </header>
+
+        <section class="photos-section section">
+            <div class="container">
+                <div class="photo-grid">
+                    <div class="photo-item" onclick="openLightbox('images/photos/1.jpg')">
+                        <img src="images/photos/1.jpg" alt="Matt Stoller photo 1">
+                    </div>
+                    <div class="photo-item" onclick="openLightbox('images/photos/2.jpg')">
+                        <img src="images/photos/2.jpg" alt="Matt Stoller photo 2">
+                    </div>
+                    <div class="photo-item" onclick="openLightbox('images/photos/3.jpg')">
+                        <img src="images/photos/3.jpg" alt="Matt Stoller photo 3">
+                    </div>
+                    <div class="photo-item" onclick="openLightbox('images/photos/4.jpg')">
+                        <img src="images/photos/4.jpg" alt="Matt Stoller photo 4">
+                    </div>
+                    <div class="photo-item" onclick="openLightbox('images/photos/5.jpg')">
+                        <img src="images/photos/5.jpg" alt="Matt Stoller photo 5">
+                    </div>
+                    <div class="photo-item" onclick="openLightbox('images/photos/627989.t5d6d7c7d.m1200.xLO9-pB_p.jpg')">
+                        <img src="images/photos/627989.t5d6d7c7d.m1200.xLO9-pB_p.jpg" alt="Matt Stoller photo 6">
+                    </div>
+                    <div class="photo-item" onclick="openLightbox('images/photos/627990.t5d6d7c7d.m1200.xqyTJAgdV.jpg')">
+                        <img src="images/photos/627990.t5d6d7c7d.m1200.xqyTJAgdV.jpg" alt="Matt Stoller photo 7">
+                    </div>
+                    <div class="photo-item" onclick="openLightbox('images/photos/628012.t5d6d7cf4.m1200.xeDtysR4g.jpg')">
+                        <img src="images/photos/628012.t5d6d7cf4.m1200.xeDtysR4g.jpg" alt="Matt Stoller photo 8">
+                    </div>
+                    <div class="photo-item" onclick="openLightbox('images/photos/STOLLER1 (1).JPG')">
+                        <img src="images/photos/STOLLER1 (1).JPG" alt="Matt Stoller photo 9">
+                    </div>
+                    <div class="photo-item" onclick="openLightbox('images/photos/STOLLER2.JPG')">
+                        <img src="images/photos/STOLLER2.JPG" alt="Matt Stoller photo 10">
+                    </div>
+                    <div class="photo-item" onclick="openLightbox('images/photos/STOLLER3.JPG')">
+                        <img src="images/photos/STOLLER3.JPG" alt="Matt Stoller photo 11">
+                    </div>
+                </div>
+                <p class="photos-download">Full sized versions of these photos are available here: <a href="https://www.dropbox.com/scl/fo/22f95bgylwoetyobxx70u/AAwE10_TnmlmMOyrJN6ylM4?rlkey=qq7t66ux5of6xz0ezrahmcdpf&dl=0" target="_blank">Dropbox</a></p>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-img" src="" alt="Full size photo">
+        </div>
+
+        <script>
+            function openLightbox(src) {
+                document.getElementById('lightbox-img').src = src;
+                document.getElementById('lightbox').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                document.getElementById('lightbox').classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeLightbox();
+            });
+        </script>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Matt Stoller</p>
+        </div>
+    </footer>
+</body>
+</html>
